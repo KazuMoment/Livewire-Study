@@ -8,7 +8,7 @@
         type="text"
         wire:model.live.debounce.300ms="term"
         placeholder="Search for Books..."
-        class="search bg-gray-700 text-gray-300"
+        class="search input"
     >
 
     <ul class="list">

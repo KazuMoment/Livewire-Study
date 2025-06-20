@@ -7,7 +7,7 @@
 
         <form wire:submit="$refresh">
             <span class="mr-2">Your Name: </span>
-            <input type="text" wire:model.live.debounce.1000="name" class="bg-gray-700 text-gray-300">
+            <input type="text" wire:model.live.debounce.1000="name" class="input" >
             <button>Update</button>
         </form>
     </header>

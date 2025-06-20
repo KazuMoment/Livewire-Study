@@ -4,21 +4,21 @@
     <form wire:submit="save">
         <div class="field">
             <label>Book Title:</label>
-            <input class="bg-gray-700 text-gray-300" type="text" wire:model="title">
+            <input class="input" type="text" wire:model="title">
             @error('title')
                 <div class="error">{{ $message }}</div>
             @enderror
         </div>
         <div class="field">
             <label>Book Author:</label>
-            <input class="bg-gray-700 text-gray-300" type="text" wire:model="author">
+            <input class="input"  type="text" wire:model="author">
             @error('author')
                 <div class="error">{{ $message }}</div>
             @enderror
         </div>
         <div class="field">
             <label>Book Rating:</label>
-            <input class="bg-gray-700 text-gray-300" type="number" wire:model="rating">
+            <input class="input"  type="number" wire:model="rating">
             @error('rating')
                 <div class="error">{{ $message }}</div>
             @enderror

@@ -31,9 +31,9 @@ button {
   background: var(--highlight);
   @apply font-semibold rounded px-2 py-1 text-white;
 }
-input {
+.input {
   font-size: 1rem;
-  background: theme('colors.dark');
+  background: var(--dark);
   @apply rounded py-2 px-3;
 }
 
