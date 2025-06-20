@@ -11,10 +11,9 @@
 <body>
     <main>
         <h2>Welcome to the page!</h2>
-
-        <livewire:book-list>
-
-
+        <a href="{{ route('book.list') }}">
+            See Books
+        </a>
     </main>
 </body>
 </html>

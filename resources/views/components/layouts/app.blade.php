@@ -12,14 +12,14 @@
                 <h1>My Book Reviews</h1>
                 <a
                     wire:navigate
-                    @class(['active' => request()->is('/')])
-                    href="/">
+                    @class(['active' => request()->is('book')])
+                    href="{{ route('book.list') }}">
                     Book List
                 </a>
                 <a
                     wire:navigate
-                    @class(['active' => request()->is('create')])
-                    href="/create">
+                    @class(['active' => request()->is('book/create')])
+                    href="{{ route('book.create') }}">
                     Add a Book
                 </a>
             </div>
