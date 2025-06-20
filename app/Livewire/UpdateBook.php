@@ -39,7 +39,7 @@ class UpdateBook extends Component
             'rating' => $this->rating,
         ]);
 
-        $this->redirect('/', navigate:true);
+        $this->redirect('/book', navigate:true);
     }
 
     public function render()
