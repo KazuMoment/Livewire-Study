@@ -1,4 +1,4 @@
-<div class="create">
+<div class="create max-w-xl mx-auto">
     <h3>Create new book</h3>
 
     <form wire:submit="save">
@@ -23,6 +23,21 @@
                 <div class="error">{{ $message }}</div>
             @enderror
         </div>
+
+        <div class="field">
+            <label>Category:</label>
+            <select class="input"  type="number" wire:model="category_id">
+                @foreach($categories as $category)
+                    <option value="{{ $category->id }}">
+                        {{ $category->name }}
+                    </option>
+                @endforeach
+            </select>
+            @error('category')
+                <div class="error">{{ $message }}</div>
+            @enderror
+        </div>
+
         <button>Add Book</button>
     </form>
 </div>

@@ -5,6 +5,7 @@ namespace App\Livewire;
 use App\Models\Book;
 use Livewire\Attributes\Rule;
 use Livewire\Component;
+use App\Models\Category;
 
 class CreateBook extends Component
 {
@@ -18,6 +19,14 @@ class CreateBook extends Component
     #[Rule('integer|required|min:1|max:10')]
     public $rating;
 
+    public $category_id;
+    public $categories = [];
+
+    public function mount()
+    {
+        $this->categories = Category::all();
+    }
+
     public function save()
     {
 
@@ -29,7 +38,7 @@ class CreateBook extends Component
             'rating' => $this->rating,
         ]);
 
-        $this->redirect('/', navigate:true);
+        $this->redirect('/book', navigate:true);
     }
 
     public function render()

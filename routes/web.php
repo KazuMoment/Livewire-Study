@@ -11,12 +11,6 @@ Route::get('/', function () {
 });
 
 
-Route::middleware('auth')->group(function () {
-    Route::get('/book',  BookList::class)->name('book.list');
-    Route::get('/book/create',  CreateBook::class)->name('book.create');
-    Route::get('/book/update{book}', UpdateBook::class)->name('book.update');
-});
-
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
@@ -28,5 +22,5 @@ Route::middleware('auth')->group(function () {
 });
 
 
-
+require __DIR__ . '/system.php';
 require __DIR__.'/auth.php';

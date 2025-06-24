@@ -23,6 +23,7 @@
                 </a>
                 <h3>{{ $book->title }}</h3>
                 <h4>{{ $book->author }}</h4>
+                <h4>{{ $book->category->name }}</h4>
                 <p>Rating: {{ $book->rating }}/10</p>
             </li>
         @endforeach
